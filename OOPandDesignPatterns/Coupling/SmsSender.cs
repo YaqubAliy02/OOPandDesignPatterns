@@ -1,10 +1,10 @@
 ﻿namespace OOPandDesignPatterns.Coupling
 {
-    internal class EmailSender : INotification
+    internal class SmsSender : INotification
     {
         public void SendNotification(string message)
         {
-            Console.WriteLine("Sending email: " + message);
+            Console.WriteLine("Send sms: " + message);
         }
     }
 }

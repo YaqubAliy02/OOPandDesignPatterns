@@ -66,6 +66,9 @@ Animal dog = new Dog();
 
 //Coupling
 
-Order order = new Order();
+Order order = new Order(new EmailSender());
 order.PlaceOrder();
+
+Order order1 = new Order(new SmsSender());
+order1.PlaceOrder();
 

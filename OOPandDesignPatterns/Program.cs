@@ -1,4 +1,5 @@
 ﻿using OOPandDesignPatterns.Abstraction;
+using OOPandDesignPatterns.Coupling;
 using OOPandDesignPatterns.Encapsulation;
 using OOPandDesignPatterns.Inheritance;
 using OOPandDesignPatterns.Polymorphism;
@@ -39,7 +40,7 @@ Account savingsAccount = new SavingsAccount();
 
 
 //Inheritance
-//var car = new Car(); //We cannot initialize  NumberOfDoors I mean which  the methods or field are created at Car class
+var car = new Car(); //We cannot initialize  NumberOfDoors I mean which  the methods or field are created at Car class
 //because when we get instance of Car like this "Vehicle car = new Car();" we can only get props and methods 
 // where created at Vehicle and inherit Car class, instead, we can use like this "var car = new Car();" 
 // and in this case we can access to Car's class props and method's
@@ -55,10 +56,16 @@ Account savingsAccount = new SavingsAccount();
 //Polymorphism
 
 Animal dog = new Dog();
-dog.MakeSound();
-dog.Eat();
+//dog.MakeSound();
+//dog.Eat();
+//
+//Animal cat = new Cat();
+//cat.MakeSound();
+//cat.Eat();
 
-Animal cat = new Cat();
-cat.MakeSound();
-cat.Eat();
+
+//Coupling
+
+Order order = new Order();
+order.PlaceOrder();
 

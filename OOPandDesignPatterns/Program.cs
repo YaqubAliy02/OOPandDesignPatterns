@@ -1,6 +1,7 @@
 ﻿using OOPandDesignPatterns.Abstraction;
 using OOPandDesignPatterns.Encapsulation;
 using OOPandDesignPatterns.Inheritance;
+using OOPandDesignPatterns.Polymorphism;
 
 //Encapsulation 
 BadBankAccount badBankAccount = new BadBankAccount();
@@ -38,16 +39,26 @@ Account savingsAccount = new SavingsAccount();
 
 
 //Inheritance
-var car = new Car(); //We cannot initialize  NumberOfDoors I mean which  the methods or field are created at Car class
-                     //because when we get instance of Car like this "Vehicle car = new Car();" we can only get props and methods 
-                     // where created at Vehicle and inherit Car class, instead, we can use like this "var car = new Car();" 
-                     // and in this case we can access to Car's class props and method's
-car.Make = "Chevrolet";
-car.Model = "Matiz";
-car.Year = 2000;
-car.NumberOfDoors = 4;
-car.StartEngine();
-car.DisplayInformation();
-car.LockDoor();
+//var car = new Car(); //We cannot initialize  NumberOfDoors I mean which  the methods or field are created at Car class
+//because when we get instance of Car like this "Vehicle car = new Car();" we can only get props and methods 
+// where created at Vehicle and inherit Car class, instead, we can use like this "var car = new Car();" 
+// and in this case we can access to Car's class props and method's
+//car.Make = "Chevrolet";
+//car.Model = "Matiz";
+//car.Year = 2000;
+//car.NumberOfDoors = 4;
+//car.StartEngine();
+//car.DisplayInformation();
+//car.LockDoor();
 
+
+//Polymorphism
+
+Animal dog = new Dog();
+dog.MakeSound();
+dog.Eat();
+
+Animal cat = new Cat();
+cat.MakeSound();
+cat.Eat();
 

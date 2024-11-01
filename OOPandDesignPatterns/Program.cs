@@ -3,6 +3,7 @@ using OOPandDesignPatterns.Coupling;
 using OOPandDesignPatterns.Encapsulation;
 using OOPandDesignPatterns.Inheritance;
 using OOPandDesignPatterns.Polymorphism;
+using OOPandDesignPatterns.SOLID.L.Problem;
 
 //Encapsulation 
 BadBankAccount badBankAccount = new BadBankAccount();
@@ -67,8 +68,17 @@ Animal dog = new Dog();
 //Coupling
 
 Order order = new Order(new EmailSender());
-order.PlaceOrder();
+//order.PlaceOrder();
 
 Order order1 = new Order(new SmsSender());
-order1.PlaceOrder();
+//order1.PlaceOrder();
+
+
+//SOLID => L
+var rect = new Square();
+rect.Height = 10;
+rect.Width = 5;
+Console.WriteLine("Expected area = 10 * 5 = 50");
+Console.WriteLine("Calculated area = " + rect.Area);
+
 

@@ -3,10 +3,11 @@ using OOPandDesignPatterns.Coupling;
 using OOPandDesignPatterns.Encapsulation;
 using OOPandDesignPatterns.Inheritance;
 using OOPandDesignPatterns.Polymorphism;
-using OOPandDesignPatterns.SOLID.I.Probem;
-
+//using OOPandDesignPatterns.SOLID.L.Solution;
 //using OOPandDesignPatterns.SOLID.L.Problem;
-using OOPandDesignPatterns.SOLID.L.Solution;
+
+//using OOPandDesignPatterns.SOLID.I.Probem;
+using OOPandDesignPatterns.SOLID.I.Solution;
 
 //Encapsulation 
 BadBankAccount badBankAccount = new BadBankAccount();
@@ -100,10 +101,23 @@ Console.WriteLine("25");
 Console.WriteLine("Area of the square " + square.Area); 
 */
 
-//SOLID => I(Problem)
+/*
+ //SOLID => I(Problem)
 var circle = new Circle();
 circle.Radius = 10;
 Console.WriteLine(circle.Area());
 Console.WriteLine(circle.Volume());
+*/
+
+//SOLID => I(Solution)
+
+/*
+ Clients should not be forced to depend on interfaces they not use.
+ */
+var circle = new Circle();
+circle.Radius = 8;
+Console.WriteLine(circle.Area());
+//Console.WriteLine(circle.Volume()); // in this case it is not implemented that's why 
+                                    // it is showing error 
 
 

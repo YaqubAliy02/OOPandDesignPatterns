@@ -3,7 +3,10 @@ using OOPandDesignPatterns.Coupling;
 using OOPandDesignPatterns.Encapsulation;
 //using OOPandDesignPatterns.Inheritance;
 using OOPandDesignPatterns.Polymorphism;
-using OOPandDesignPatterns.SOLID.D.Problem;
+using OOPandDesignPatterns.SOLID.D.Solution;
+
+
+//using OOPandDesignPatterns.SOLID.D.Problem;
 
 //using OOPandDesignPatterns.SOLID.L.Solution;
 //using OOPandDesignPatterns.SOLID.L.Problem;
@@ -123,13 +126,22 @@ Console.WriteLine(circle.Area());
 // it is showing error 
 
 
-//SOLID => D(Problem)
+////SOLID => D(Problem)
+//var car = new Car();//We actually have no way  when we create new car we have no way of 
+//                    //changing the type of engine that car is built with
+//                    //Currently if we want to change the type of engine so say we have currently we 
+//                    //only have one engine class buy say we have another class called  electricEngine
+//                    //or something else engine there is no way of changing engine type when we create 
+//                    //a new car.You know we can't just add the engine here we have to change it within
+//                    // the car class okay so this is not very flexible.
+//car.StartCar();
 
-var car = new Car();//We actually have no way  when we create new car we have no way of 
-                    //changing the type of engine that car is built with
-                    //Currently if we want to change the type of engine so say we have currently we 
-                    //only have one engine class buy say we have another class called  electricEngine
-                    //or something else engine there is no way of changing engine type when we create 
-                    //a new car.You know we can't just add the engine here we have to change it within
-                    // the car class okay so this is not very flexible.
-car.StartCar();
+//SOLID => D(Solution)
+
+var car = new Car(new Engine());// The advantage of this principle is that it provides us with
+                                // a lot more flexibility because now whenever we create new
+                                // car we can pass in what type of engine we want  the car to 
+                                // be built  with like so and currently  we only  have one type
+                                // of engine but let's  just say we also had another type of engine
+                                // interface and we can change it.
+car.StartCar(); 

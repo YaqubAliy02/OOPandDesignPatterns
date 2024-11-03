@@ -1,8 +1,10 @@
 ﻿using OOPandDesignPatterns.Abstraction;
 using OOPandDesignPatterns.Coupling;
 using OOPandDesignPatterns.Encapsulation;
-using OOPandDesignPatterns.Inheritance;
+//using OOPandDesignPatterns.Inheritance;
 using OOPandDesignPatterns.Polymorphism;
+using OOPandDesignPatterns.SOLID.D.Problem;
+
 //using OOPandDesignPatterns.SOLID.L.Solution;
 //using OOPandDesignPatterns.SOLID.L.Problem;
 
@@ -45,7 +47,7 @@ Account savingsAccount = new SavingsAccount();
 
 
 //Inheritance
-var car = new Car(); //We cannot initialize  NumberOfDoors I mean which  the methods or field are created at Car class
+//var car = new Car(); //We cannot initialize  NumberOfDoors I mean which  the methods or field are created at Car class
 //because when we get instance of Car like this "Vehicle car = new Car();" we can only get props and methods 
 // where created at Vehicle and inherit Car class, instead, we can use like this "var car = new Car();" 
 // and in this case we can access to Car's class props and method's
@@ -112,12 +114,22 @@ Console.WriteLine(circle.Volume());
 //SOLID => I(Solution)
 
 /*
- Clients should not be forced to depend on interfaces they not use.
+ Clients should not be forced to depend on interfaces' methods they not use.
  */
 var circle = new Circle();
 circle.Radius = 8;
 Console.WriteLine(circle.Area());
 //Console.WriteLine(circle.Volume()); // in this case it is not implemented that's why 
-                                    // it is showing error 
+// it is showing error 
 
 
+//SOLID => D(Problem)
+
+var car = new Car();//We actually have no way  when we create new car we have no way of 
+                    //changing the type of engine that car is built with
+                    //Currently if we want to change the type of engine so say we have currently we 
+                    //only have one engine class buy say we have another class called  electricEngine
+                    //or something else engine there is no way of changing engine type when we create 
+                    //a new car.You know we can't just add the engine here we have to change it within
+                    // the car class okay so this is not very flexible.
+car.StartCar();

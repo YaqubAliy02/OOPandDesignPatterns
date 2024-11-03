@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualBasic;
-
+﻿
 namespace OOPandDesignPatterns.Inheritance
 {
     internal class Car : Vehicle

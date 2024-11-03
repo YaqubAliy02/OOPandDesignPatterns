@@ -3,6 +3,8 @@ using OOPandDesignPatterns.Coupling;
 using OOPandDesignPatterns.Encapsulation;
 using OOPandDesignPatterns.Inheritance;
 using OOPandDesignPatterns.Polymorphism;
+using OOPandDesignPatterns.SOLID.I.Probem;
+
 //using OOPandDesignPatterns.SOLID.L.Problem;
 using OOPandDesignPatterns.SOLID.L.Solution;
 
@@ -86,14 +88,22 @@ Order order1 = new Order(new SmsSender());
  Objects of a superclass should be replaceable  with objects of its subclass without
  affecting the correctness of the program.
  */
-//SOLID => L (Solution)
+
+/*
+ //SOLID => L (Solution)
 Shape rectangle = new Rectangle { Height = 5, Width = 4 };
 Console.WriteLine("20");
 Console.WriteLine("Area of the rectangle " + rectangle.Area);
 
 Shape square = new Square { SideLength = 5 };
 Console.WriteLine("25");
-Console.WriteLine("Area of the square " + square.Area);
+Console.WriteLine("Area of the square " + square.Area); 
+*/
 
+//SOLID => I(Problem)
+var circle = new Circle();
+circle.Radius = 10;
+Console.WriteLine(circle.Area());
+Console.WriteLine(circle.Volume());
 
 
